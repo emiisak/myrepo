@@ -15,3 +15,18 @@ knitr::opts_chunk$set(echo = TRUE)
 This is a line with simple text. 
 
 **And this is a line in bold text**
+
+## A graph of the data
+
+```{r echo= FALSE, message=FALSE, warning=FALSE}
+library(palmerpenguins)
+#head(penguins)
+library(tidyverse)
+penguins %>%
+  ggplot()+
+  aes(x=body_mass_g, y=flipper_length_mm, colour=species)+
+  geom_point()+
+  labs(x="Body weight", y="Flipper lengt (mm)", title = "Heavy penguin = Big penguin")+
+  geom_smooth(aes(colour = species), method = "lm", se=FALSE)
+```
+
