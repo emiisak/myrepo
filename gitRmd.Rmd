@@ -1,0 +1,17 @@
+---
+title: "startingGit"
+author: "Emil"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### R Markdown
+
+#### New Section title
+
+This is a line with simple text. 
+
+**And this is a line in bold text**
